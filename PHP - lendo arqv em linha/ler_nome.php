@@ -15,8 +15,9 @@ $bytes = filesize("nomes.txt");
 $nomes = fread($arquivo, $bytes); // Lê o arquivo inteiro
 */
 
-while ($linha = fgets($arquivo)) {
-    echo $linha . "<br>"; // Lê linha por linha e exibe
+while (!feof($arquivo)) {
+    $nome = fgets($arquivo); // Lê uma linha do arquivo
+    echo $nome . "<br>"; // Exibe o nome lido
 }
 
 fclose($arquivo); // Fecha o arquivo
