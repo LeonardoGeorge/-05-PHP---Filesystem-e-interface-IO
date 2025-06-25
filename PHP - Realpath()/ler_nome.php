@@ -27,6 +27,8 @@ $arquivo = fopen($relativePath, "a");
 fwrite($arquivo, "\n");
 fwrite($arquivo, "Novo Nome Adicionado");
 
+echo $absolutePath . "<br>";
+
 
 
 
